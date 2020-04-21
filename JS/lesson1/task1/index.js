@@ -1,6 +1,6 @@
 function squareArray(arr) {
     if (!Array.isArray(arr)) {
-        return null
+        return null;
     }
     const result = []
     for (let i = 0; i < arr.length; i += 1) {
