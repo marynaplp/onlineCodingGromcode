@@ -6,14 +6,12 @@ function some(arr) {
         //  функция виполнилась один раз потому омы всегда будеи виполнять одно  условие. то есть до первого   куегкт 
         // После return  функция не виведится. 
         // 
-        console.log('==> run');
+        //  console.log('==> run');
         if (arr[i] % 3 !== 0) {
-            return true;
+            return false;
         }
-        return false;
-
     }
-
+    return true;
 }
 const numbers = [4, 5, 3, 4, 5];
 const result = some(numbers);
