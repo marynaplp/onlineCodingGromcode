@@ -9,11 +9,11 @@ function some(arr) {
         //  console.log('==> run');
         if (arr[i] % 3 !== 0) {
             return false;
-        } else {
-            return true;
+
+
         }
     }
-
+    return true;
 }
 const numbers = [4, 5, 3, 4, 5];
 const result = some(numbers);
