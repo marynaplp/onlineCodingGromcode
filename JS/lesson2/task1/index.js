@@ -70,7 +70,7 @@ function square(num) {
     return num * num
 }
 
-const squaredNumbers = numbersList.map(square);
+const squaredNumbers = numbersList.map(callback);
 
 // c помощью метода map создайте новый массив squaredNumbers, в котором будут квадраты чисел из numbersList
 // выведите squaredNumbers в консоль
@@ -97,7 +97,7 @@ function filterFunc(num) {
 
 }
 
-const evenNumbers = numbersList.filter(callback)
+const evenNumbers = numbersList.filter(callback);
 
 
 
