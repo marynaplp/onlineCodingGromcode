@@ -12,9 +12,9 @@ const numbersList = [1, 2, 3, 4, 5];
 // выведите эту переменную в консоль
 
 // ... code here
-//const a = numbersList.pop();
-//console.log(a);
-//console.log(numbersList);
+const a = numbersList.pop();
+console.log(a);
+console.log(numbersList);
 
 
 /* push - добавит элемент в конец массива */
@@ -23,8 +23,8 @@ const numbersList = [1, 2, 3, 4, 5];
 // выведите numbersList в консоль
 
 // ... code here
-//const result = numbersList.push(6);
-//console.log(result); // довжина массиву 
+const result = numbersList.push(6);
+console.log(result); // довжина массиву 
 
 
 /* shift - удалит из массива первый элемент и вернет его */
@@ -33,8 +33,8 @@ const numbersList = [1, 2, 3, 4, 5];
 // выведите эту переменную в консоль
 
 // ... code here
-//const firstNumber = numbersList.shift(); // ничего не принимает 
-//console.log(firstNumber);
+const firstNumber = numbersList.shift(); // ничего не принимает 
+console.log(firstNumber);
 
 /* unshift - добавит элемент в начало массива */
 
@@ -42,8 +42,8 @@ const numbersList = [1, 2, 3, 4, 5];
 // выведите numbersList в консоль
 
 // ... code h
-//numbersList.unshift(0);
-//console.log(numbersList);
+numbersList.unshift(0);
+console.log(numbersList);
 
 
 
@@ -51,13 +51,14 @@ const numbersList = [1, 2, 3, 4, 5];
 /* ===> НЕ мутирующие методы массивов <=== */
 /* ===> НЕ изменяют исходный массив <===== */
 /* ======================================= */
-//function sum(a, b) {
-//  return a + b
-//}
-//function func(item) {
-//  console.log(item);
-//}
-//numbersList.forEach(func);
+function sum(a, b) {
+    return a + b
+}
+
+function func(item) {
+    console.log(item);
+}
+numbersList.forEach(func);
 // принимает функцию  который визивается для каждого елемента массива 
 
 /* метод map */
@@ -65,15 +66,15 @@ const numbersList = [1, 2, 3, 4, 5];
 /* ф-ция callback запустится по очереди для каждого элемента начального массива arr */
 /* элементы массива newArr - это результат вызова callback для каждого элемента arr */
 /* newArr[i] = callback(arr[i]) */
-//function square(num) {
-//   num * num // == undefined
-//}
+function square(num) {
+    num * num // == undefined
+}
 
 
-//const squaredNumbers = numbersList.map(square);
-//console.log(numbersList, 'numbersList');
+const squaredNumbers = numbersList.map(square);
+console.log(numbersList, 'numbersList');
 
-//console.log(squaredNumbers, 'squaredNumbers')
+console.log(squaredNumbers, 'squaredNumbers')
 
 // c помощью метода map создайте новый массив squaredNumbers, в котором будут квадраты чисел из numbersList
 // выведите squaredNumbers в консоль
@@ -94,16 +95,15 @@ const numbersList = [1, 2, 3, 4, 5];
 
 // c помощью метода filter создайте новый массив evenNumbers, в котором только четные числа из numbersList
 // выведите evenNumbers в консоль
-//function filterFunc(num) {
-// console.log('call')
-//return num % 2 === 0;
+function filterFunc(num) {
+    console.log('call')
+    return num % 2 === 0;
 
-//}
+}
 
-
-//const evenNumbers = numbersList.filter(callback)
-//console.log(evenNumbers);
-//console.log(evenNumbers === numbersList)
+const evenNumbers = numbersList.filter(callback)
+console.log(evenNumbers);
+console.log(evenNumbers === numbersList)
 
 
 /* метод find */
@@ -122,4 +122,3 @@ function callback(num) {
 
 
 const firstOdd = numbersList.find(callback);
-console.log()
