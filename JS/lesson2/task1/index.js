@@ -113,7 +113,6 @@ console.log(evenNumbers);
 
 // ... code here
 function callback(num) {
-    console.log('callback');
     return num % 2 === 1;
 }
 
