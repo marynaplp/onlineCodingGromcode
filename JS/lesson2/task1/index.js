@@ -12,9 +12,9 @@ const numbersList = [1, 2, 3, 4, 5];
 // выведите эту переменную в консоль
 
 // ... code here
-const a = numbersList.pop();
-console.log(a);
-console.log(numbersList);
+//const a = numbersList.pop();
+//console.log(a);
+//console.log(numbersList);
 
 
 /* push - добавит элемент в конец массива */
@@ -23,8 +23,8 @@ console.log(numbersList);
 // выведите numbersList в консоль
 
 // ... code here
-const result = numbersList.push(6);
-console.log(result); // довжина массиву 
+//const result = numbersList.push(6);
+//console.log(result); // довжина массиву 
 
 
 /* shift - удалит из массива первый элемент и вернет его */
@@ -33,8 +33,8 @@ console.log(result); // довжина массиву
 // выведите эту переменную в консоль
 
 // ... code here
-const firstNumber = numbersList.shift(); // ничего не принимает 
-console.log(firstNumber);
+//const firstNumber = numbersList.shift(); // ничего не принимает 
+//console.log(firstNumber);
 
 /* unshift - добавит элемент в начало массива */
 
@@ -42,8 +42,8 @@ console.log(firstNumber);
 // выведите numbersList в консоль
 
 // ... code h
-numbersList.unshift(0);
-console.log(numbersList);
+//numbersList.unshift(0);
+//console.log(numbersList);
 
 
 
@@ -54,10 +54,10 @@ console.log(numbersList);
 //function sum(a, b) {
 //  return a + b
 //}
-function func(item) {
-    console.log(item);
-}
-numbersList.forEach(func);
+//function func(item) {
+//  console.log(item);
+//}
+//numbersList.forEach(func);
 // принимает функцию  который визивается для каждого елемента массива 
 
 /* метод map */
@@ -65,6 +65,15 @@ numbersList.forEach(func);
 /* ф-ция callback запустится по очереди для каждого элемента начального массива arr */
 /* элементы массива newArr - это результат вызова callback для каждого элемента arr */
 /* newArr[i] = callback(arr[i]) */
+//function square(num) {
+//   num * num // == undefined
+//}
+
+
+//const squaredNumbers = numbersList.map(square);
+//console.log(numbersList, 'numbersList');
+
+//console.log(squaredNumbers, 'squaredNumbers')
 
 // c помощью метода map создайте новый массив squaredNumbers, в котором будут квадраты чисел из numbersList
 // выведите squaredNumbers в консоль
@@ -80,10 +89,21 @@ numbersList.forEach(func);
 /* callback(arr[i]) === true -> элемент будет добавлен в финальный массив  */
 /* callback(arr[i]) === false -> элемент НЕ будет добавлен в финальный массив  */
 
+
+
+
 // c помощью метода filter создайте новый массив evenNumbers, в котором только четные числа из numbersList
 // выведите evenNumbers в консоль
+//function filterFunc(num) {
+// console.log('call')
+//return num % 2 === 0;
 
-// ... code here
+//}
+
+
+//const evenNumbers = numbersList.filter(callback)
+//console.log(evenNumbers);
+//console.log(evenNumbers === numbersList)
 
 
 /* метод find */
@@ -94,3 +114,12 @@ numbersList.forEach(func);
 // c помощью метода find найдите первое нечетное число в numbersList и выведите его в консоль
 
 // ... code here
+function callback(num) {
+    console.log('call');
+    return num % 2 === 1;
+}
+
+
+
+const firstOdd = numbersList.find(callback);
+console.log()
