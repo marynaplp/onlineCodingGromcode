@@ -12,8 +12,8 @@ const numbersList = [1, 2, 3, 4, 5];
 // выведите эту переменную в консоль
 
 // ... code here
-//const a = numbersList.pop();
-//console.log(a);
+const a = numbersList.pop();
+console.log(a);
 console.log(numbersList);
 
 
@@ -42,7 +42,7 @@ console.log(firstNumber);
 // выведите numbersList в консоль
 
 // ... code h
-numbersList.unshift(0);
+const firstNumber = numbersList.unshift(0);
 console.log(numbersList);
 
 
@@ -72,7 +72,6 @@ function square(num) {
 
 
 const squaredNumbers = numbersList.map(square);
-console.log(numbersList, 'numbersList');
 
 console.log(squaredNumbers, 'squaredNumbers')
 
