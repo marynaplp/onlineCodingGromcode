@@ -72,8 +72,6 @@ function square(num) {
 
 
 const squaredNumbers = numbersList.map(square);
-console.log(numbersList, 'numbersList');
-
 console.log(squaredNumbers, 'squaredNumbers')
 
 // c помощью метода map создайте новый массив squaredNumbers, в котором будут квадраты чисел из numbersList
