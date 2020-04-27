@@ -67,9 +67,8 @@ numbersList.forEach(func);
 /* элементы массива newArr - это результат вызова callback для каждого элемента arr */
 /* newArr[i] = callback(arr[i]) */
 function square(num) {
-    num * num // == undefined
+    return num * num
 }
-
 
 const squaredNumbers = numbersList.map(square);
 
@@ -99,8 +98,7 @@ function filterFunc(num) {
 }
 
 const evenNumbers = numbersList.filter(callback)
-console.log(evenNumbers);
-console.log(evenNumbers === numbersList)
+
 
 
 /* метод find */
