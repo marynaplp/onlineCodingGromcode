@@ -114,11 +114,9 @@ console.log(evenNumbers);
 
 // ... code here
 function callback(num) {
-    console.log('call');
+    console.log('callback');
     return num % 2 === 1;
 }
-
-
 
 const firstOdd = numbersList.find(callback);
 console.log(firstOdd)
