@@ -42,7 +42,7 @@ console.log(firstNumber);
 // выведите numbersList в консоль
 
 // ... code h
-const firstNumber = numbersList.unshift(0);
+numbersList.unshift(0);
 console.log(numbersList);
 
 
@@ -67,13 +67,13 @@ numbersList.forEach(func);
 /* элементы массива newArr - это результат вызова callback для каждого элемента arr */
 /* newArr[i] = callback(arr[i]) */
 function square(num) {
-    num * num // == undefined
+    return num * num // == undefined
 }
 
 
 const squaredNumbers = numbersList.map(square);
 
-console.log(squaredNumbers, 'squaredNumbers')
+console.log(squaredNumbers)
 
 // c помощью метода map создайте новый массив squaredNumbers, в котором будут квадраты чисел из numbersList
 // выведите squaredNumbers в консоль
@@ -102,7 +102,7 @@ function filterFunc(num) {
 
 const evenNumbers = numbersList.filter(callback)
 console.log(evenNumbers);
-console.log(evenNumbers === numbersList)
+
 
 
 /* метод find */
