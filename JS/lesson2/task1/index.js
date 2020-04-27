@@ -70,7 +70,7 @@ function square(num) {
     return num * num
 }
 
-const squaredNumbers = numbersList.map(callback);
+const squaredNumbers = numbersList.map(square(item));
 
 // c помощью метода map создайте новый массив squaredNumbers, в котором будут квадраты чисел из numbersList
 // выведите squaredNumbers в консоль
