@@ -94,13 +94,13 @@ console.log(squaredNumbers)
 
 // c помощью метода filter создайте новый массив evenNumbers, в котором только четные числа из numbersList
 // выведите evenNumbers в консоль
-function callback(num) {
-    console.log('callback')
+function filterFunc(num) {
+    //  console.log('callback')
     return num % 2 === 0;
 
 }
 
-const evenNumbers = numbersList.filter(callback)
+const evenNumbers = numbersList.filter(filterFunc)
 console.log(evenNumbers);
 
 
@@ -114,6 +114,7 @@ console.log(evenNumbers);
 
 // ... code here
 function callback(num) {
+    console.log('callback');
     return num % 2 === 1;
 }
 
