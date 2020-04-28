@@ -1,5 +1,5 @@
 const getTotalPrice = arr => {
-    const sum = numberLists.reduce(function callback(acc, num) {
+    const sum = arr.reduce(function callback(acc, num) {
         return acc + num;
     }, 0);
     console.log(sum)
