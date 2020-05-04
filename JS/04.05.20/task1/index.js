@@ -1,7 +1,7 @@
 //input: object, string
 //returns: object
 function addPropertyV1(userData, userId) {
-    userDate.id = userId;
+    userData.id = userId;
     return userData;
 }
 
