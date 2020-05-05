@@ -4,5 +4,5 @@ const buildObject = (keysList, valuesList) => {
             ...acc,
             [key]: valuesList[index]
         }
-    }, obj)
+    }, {})
 }
