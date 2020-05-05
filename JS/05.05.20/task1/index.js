@@ -5,5 +5,5 @@ function buildObject(keyList, valuesList) {
         } /// перезаписивает  значение  
 
 
-    }, {});
+    }, obj);
 }
