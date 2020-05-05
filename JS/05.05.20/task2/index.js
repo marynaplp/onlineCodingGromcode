@@ -9,11 +9,13 @@ const customers = {
     },
 };
 
-const getCustomersList = obj => Object.entries(obj)
-    .map(el => ({
-        id: el[0],
-        ...obj[el[0]]
-    }))
-    .sort((a, b) => a.age - b.age);
-
-console.log(getCustomersList(customers));
+const getCustomersList = (obj) => {
+    return Object.entries(obj).map(
+        (arr) => {
+            let obj1 = arr[1];
+            return Object.assign(obj1, {
+                id: arr[0]
+            })
+        }
+    ).sort((a, b) => a.age - b.age)
+}
