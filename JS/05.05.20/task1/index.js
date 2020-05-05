@@ -1,9 +1,8 @@
-function buildObject(keysList, valuesList) {
+const buildObject = (keysList, valuesList) => {
     return keysList.reduce((acc, key, index) => {
-        return {...acc,
+        return {
+            ...acc,
             [key]: valuesList[index]
-        } /// перезаписивает  значение  
-
-
-    }, obj);
+        }
+    }, obj)
 }
