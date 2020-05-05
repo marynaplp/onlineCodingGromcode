@@ -9,15 +9,11 @@ const customers = {
     },
 };
 
+const getCustomersList = obj => Object.entries(obj)
+    .map(el => ({
+        id: el[0],
+        ...obj[el[0]]
+    }))
+    .sort((a, b) => a.age - b.age);
 
-function getCustomersList(obj) {
-    return Object.entries(obj).map(
-        (entry) => Object.assign(entry[1], {
-            id: entry[0]
-        })
-    ).sort((a, b) => {
-        a.age - b.age // берет  соседние елементи  
-
-    })
-
-}
+console.log(getCustomersList(customers));
