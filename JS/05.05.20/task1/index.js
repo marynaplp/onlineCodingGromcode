@@ -1,12 +1,9 @@
 function buildObject(keyList, valuesList) {
     keyList.reduce((acc, key, index) => {
-        return {
-            [key]: valueList[index]
+        return {...acc,
+            [key]: valuesList[index]
         } /// перезаписивает  значение  
 
 
-    }, obj);
+    }, {});
 }
-
-let keys = ['name', 'age'];
-let values = ['Tom', 40]
