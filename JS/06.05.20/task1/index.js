@@ -15,5 +15,3 @@ const markAdmins = (users, adminIds) => {
     })
     return userArr;
 }
-const adminUsers = markAdmins(users, adminIds);
-console.log(adminUsers);
