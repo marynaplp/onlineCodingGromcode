@@ -1,21 +1,3 @@
-const adminIds = ['1', '3'];
-const users = [{
-        id: '1',
-        name: "Bob"
-    },
-    {
-        id: '2',
-        name: "Tom"
-    },
-    {
-        id: '3',
-        name: "Sam"
-    },
-    {
-        id: '4',
-        name: "Tad"
-    }
-]
 const markAdmins = (users, adminIds) => {
     let userArr = [];
     adminIds.forEach(item => {
