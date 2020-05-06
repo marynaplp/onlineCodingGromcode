@@ -1,5 +1,5 @@
 const markAdmins = (users, adminIds) => {
-    let userArr = [];
+    const userArr = [];
     adminIds.forEach(item => {
         userArr = users.map(user => {
             if (item === user.id) {
