@@ -1,17 +1,14 @@
-const markAdmins = (users, adminIds) => {
-    let userArr = [];
-    adminIds.forEach(item => {
-        userArr = users.map(user => {
-            if (item === user.id) {
-                user.isAdmin = true;
-            }
-            return user;
-        })
-    });
-    userArr.forEach(user => {
-        if (!user.isAdmin) {
-            user.isAdmin = false
-        }
-    })
-    return userArr;
+function compareObjects(obj1, obj2) {
+    const keys1 = Object.keys(obj1)
+    const keys2 = Object.keys(obj2)
+
+
+    if (keys1.length !== keys2.length) {
+        return false
+    }
+
+
+    return keys1.reduce((acc, key) =>
+        obj1[key] === obj2[key], true
+    )
 }
