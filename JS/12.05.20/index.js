@@ -10,5 +10,4 @@ function makeCounter() {
     };
 };
 //  мы постоянно  будет перезаписиватся наше значение
-
-//export { makeCounter }
+export { makeCounter }
