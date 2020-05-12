@@ -3,7 +3,7 @@
 
 
 
-export const makeCounter = () => {
+const makeCounter = () => {
     let count = 0;
     return function() {
         return count++;
@@ -19,4 +19,4 @@ counter1();
 counter2();
 //  мы постоянно  будет перезаписиватся наше значение
 
-//export { makeCounter }
+export { makeCounter }
