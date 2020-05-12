@@ -2,14 +2,13 @@
 // outcome:function
 
 
-
 function makeCounter() {
-    let count = 0;
-    return function() {
-        return count++;
+    let counter = 0;
+    return function count() {
+
+        return ++counter;
     };
 };
-
 //  мы постоянно  будет перезаписиватся наше значение
 
-export { makeCounter }
+//export { makeCounter }
