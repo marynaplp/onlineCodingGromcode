@@ -4,9 +4,9 @@
 
 const makeCounter = () => {
     let counter = 0;
-    return function() {
+    return function counter() {
 
-        return counter++;
+        return ++counter;
     };
 };
 //  мы постоянно  будет перезаписиватся наше значение
