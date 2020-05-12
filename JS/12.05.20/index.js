@@ -2,9 +2,9 @@
 // outcome:function
 
 
-function makeCounter() {
+const makeCounter = () => {
     let counter = 0;
-    return function count() {
+    return function() {
 
         return ++counter;
     };
