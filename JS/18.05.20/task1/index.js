@@ -14,7 +14,8 @@ export const timer = {
     },
     getTime() {
         let secs = this.secondsPassed < 10 ? `0${this.secondsPassed}` : this.secondsPassed
-        return `{this.minsPassed}: ${secs}`;
+        return `${this.minsPassed}:${secs}`
+
 
     },
     stopTimer() {
