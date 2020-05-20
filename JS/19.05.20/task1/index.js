@@ -60,5 +60,6 @@ export function bind(func, context, ...args) {
         console.log(funcArgs, args);
         let res = func.apply(context, funcArgs.concat(args))
         console.log(res);
+        return res;
     }
 }
