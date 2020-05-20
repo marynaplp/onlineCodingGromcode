@@ -55,7 +55,7 @@
 
 
 
-function bind(func, context, ...args) {
+export function bind(func, context, ...args) {
     return function(...funcArgs) {
         console.log(funcArgs, args);
         let res = func.apply(context, funcArgs.concat(args))
