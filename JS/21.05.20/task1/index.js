@@ -10,9 +10,8 @@ const user = {
     set fullName(fullName) {
         [this.firstName, this.lastName] = fullName.split(' ');
     },
-}
-user._firstName = 1;
-console.log(user._firstName)
+};
+export default user
 
 // console.log(user.fullName);
 // user.fullName = 'Ada Korn';
