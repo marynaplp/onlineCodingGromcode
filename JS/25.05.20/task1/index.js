@@ -6,6 +6,7 @@
          console.log(`${this.name} is running`)
      }
  }
+
  class Swimmer extends Sportsman { // наследуется 
      constructor(name, style) {
          super(name)
@@ -15,5 +16,6 @@
          console.log(`${this.name} is swimming ${this.style}`)
      }
  }
- export { Sportsman }
- export { Swimmer }
+
+ export { Sportsman };
+ export { Swimmer };
