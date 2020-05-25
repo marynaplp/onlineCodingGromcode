@@ -8,6 +8,10 @@
  }
 
 
+
+
+
+
  class Swimmer extends Sportsman { // наследуется 
      constructor(name, style) {
          super(name)
