@@ -1,19 +1,26 @@
 export class Sportsman {
     constructor(name) {
         this.name = name;
-
-        // this.run = function() {
-        //     console.log(`${this.name} is running`)
     }
     run() {
-            console.log(`${this.name} is running`)
-        }
-        // toString() {
-        //     console.log('Pa-bam') // вивела в процесе работе 
-        //     return undefined;
-
-    // }
+        console.log(`${this.name} is running`)
+    }
 }
+export class Swimmer extends Sportsman { // наследется
+    constructor(name, style) {
+        super(name);
+        this.style = style;
+    }
+    swim() {
+        console.log(`${this.name} is swimming ${this.style}`)
+    }
+}
+// toString() {
+//     console.log('Pa-bam') // вивела в процесе работе 
+//     return undefined;
+
+// }
+
 // const user1 = new Sportsman('Bob', 17);
 // console.log(user1);
 // console.log(user1.run());
@@ -27,13 +34,5 @@ export class Sportsman {
 //     return a / b;
 // }
 // console.log(delenie(5, 10));
-export class Swimmer extends Sportsman { // наследется
-    constructor(name, style) {
-        super(name);
-        this.style = style;
-    }
-    swim() {
-        console.log(`${this.name} is swimming ${this.style}`)
-    }
-}
+
 //console.log(sw1);
