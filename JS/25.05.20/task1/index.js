@@ -1,4 +1,4 @@
- class Sportsman {
+ export class Sportsman {
      constructor(name) {
          this.name = name;
      }
@@ -7,15 +7,15 @@
      }
  }
 
- class Swimmer extends Sportsman { // наследуется 
+
+ export class Swimmer extends Sportsman {
      constructor(name, style) {
          super(name)
          this.style = style;
      }
+
+
      swim() {
          console.log(`${this.name} is swimming ${this.style}`)
      }
  }
-
- export { Sportsman };
- export { Swimmer };
