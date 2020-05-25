@@ -8,9 +8,9 @@ export class Sportsman {
 }
 
 
-export class Swimmer extends Sportsman { // наследется
+export class Swimmer extends Sportsman {
     constructor(name, style) {
-        super(name);
+        super(name)
         this.style = style;
     }
     swim() {
