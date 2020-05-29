@@ -77,6 +77,7 @@ function onToggleTask(event) {
 //2.check if task has the value
 //3.add new task 
 //4.renders tasks 
+//5.put addEventListener on btn
 const btn = document.querySelector(".create-task-btn");
 
 function onCreateTask() {
