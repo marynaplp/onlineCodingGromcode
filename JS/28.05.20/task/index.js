@@ -36,7 +36,6 @@ const renderTasks = tasksList => {
         .slice()
         .sort((a, b) => a.done - b.done)
         .map((task) => {
-
             const listItemElem = document.createElement('li');
             listItemElem.classList.add('list__item');
             const checkbox = document.createElement('input');
@@ -52,8 +51,8 @@ const renderTasks = tasksList => {
         });
     listElem.append(...tasksElems);
 };
-renderTasks(tasks)
 
+renderTasks(tasks)
 const todoListElem = document.querySelector('.list');
 todoListElem.addEventListener('click', onToggleTask);
 
