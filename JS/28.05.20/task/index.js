@@ -81,14 +81,14 @@ const btn = document.querySelector(".create-task-btn");
 
 function onCreateTask() {
     const onCreateTask = document.querySelector('.task-input');
-
-    if (!onCreateTask.value) return false;
     const countTasks = tasks.length + 1;
+    if (!onCreateTask.value) return false;
+
 
     tasks.push({
         text: onCreateTask.value,
         done: false,
-        createDate: new Date().toString(),
+        createDate: new Date(),
         id: countTasks.toString(),
     });
     onCreateTask.value = "";

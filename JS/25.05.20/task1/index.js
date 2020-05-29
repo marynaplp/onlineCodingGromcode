@@ -16,6 +16,3 @@
          console.log(`${this.name} is swimming ${this.style}`);
      }
  }
-
- export { Sportsman };
- export { Swimmer };
