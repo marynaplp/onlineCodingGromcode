@@ -10,5 +10,5 @@ const makeCounter = () => {
     };
 };
 
-export { makeCounter };
+
 //  мы постоянно  будет перезаписиватся наше значение

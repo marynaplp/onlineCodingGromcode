@@ -88,7 +88,7 @@ function onCreateTask() {
     tasks.push({
         text: onCreateTask.value,
         done: false,
-        createDate: new Date(),
+        date: new Date,
         id: countTasks.toString(),
     });
     onCreateTask.value = "";

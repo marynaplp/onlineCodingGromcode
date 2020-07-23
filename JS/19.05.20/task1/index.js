@@ -6,7 +6,7 @@
 //          firstName: "Alex",
 //          email: "gmail.com"
 //      }
-//printMessage.bind(user)(30, 'Kiev'); // returns function
+printMessage.bind(user)(30, 'Kiev'); // returns function
 // printMessage.bind(user, 30)('Kiev');
 // printMessage.bind(user, 30, 'Kiev')();
 //use bind
@@ -55,7 +55,7 @@
 
 
 
-export function bind(func, context, ...args) {
+function bind(func, context, ...args) {
     return function(...funcArgs) {
         console.log(funcArgs, args);
         let res = func.apply(context, funcArgs.concat(args))
