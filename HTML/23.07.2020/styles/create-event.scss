@@ -1,0 +1,47 @@
+.create-event {
+    display: flex;
+    flex-direction: column;
+}
+
+.create-event__close-btn {
+    font-size: 30px;
+    width: 24px;
+    height: 24px;
+    /*+++++++++++*/
+    margin-left: auto;
+    transform: rotate(45deg);
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+input,
+textarea {
+    border: none;
+}
+
+.create-event-form__field {
+    width: 100%;
+    border: none;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+.create-event-form__time {
+    margin: 50px 0;
+}
+
+.create-event-form__submit-btn {
+    margin-top: 15px;
+    float: right;
+    width: 120px;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    background-color: cornflowerblue;
+    border-radius: 8px;
+}

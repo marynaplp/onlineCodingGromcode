@@ -1,0 +1,18 @@
+.header {
+    height: 60px;
+    display: flex;
+    padding: 20 40px;
+    align-items: center;
+}
+
+.navigation__today-btn {
+    margin-left: 20px;
+    padding: 5px 15px;
+}
+
+.navigation__left-btn,
+.navigation__right-btn {
+    background: transparent;
+    border: none;
+    margin-left: 20px;
+}

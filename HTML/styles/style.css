@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif
+}
+
+.header {
+    height: 60px;
+    display: flex;
+    padding: 20 40px;
+    align-items: center;
+}
+
+.create-event-button {
+    padding: 0 10px;
+    margin-left: 40px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.navigation__today-btn {
+    margin-left: 20px;
+    padding: 5px 15px;
+}
+
+.navigation__left-btn,
+.navigation__right-btn {
+    background: transparent;
+    border: none;
+    margin-left: 20px;
+}
