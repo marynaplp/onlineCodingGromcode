@@ -7,7 +7,7 @@
 //algo
 //iterate numbers from 1 to n
 //check if prime number
-//"use strict"
+"use strict"
 
 function isPrime(num) {
     for (let i = 2; i < num; i++) {
@@ -18,18 +18,12 @@ function isPrime(num) {
     return true;
 }
 
-console.log(isPrime(6));
-console.log(isPrime(11));
-console.log(isPrime(20));
 
-
-
-function getPrimes(n) {
-    for (let i = 2; i <= n; i++) {
+function getPrimes(num) {
+    for (let i = 2; i <= num; i++) {
         if (isPrime(i)) {
             console.log(i);
         }
 
     }
 }
-getPrimes(10)
