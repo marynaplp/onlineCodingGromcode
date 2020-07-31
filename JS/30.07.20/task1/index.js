@@ -36,7 +36,7 @@ function print(num) {
 }
 print(34);
 
-/* ======> Arrow functions <======= */
+
 
 /* ф-ция mult должна принимать два числа и вернуть их произведение */
 // ... code here
