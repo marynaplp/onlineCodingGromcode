@@ -18,12 +18,12 @@ function filterArray(arr, callback) {
     return result
 }
 // //Testing filter
-const array = [10, 30, 1, 8, 122];
-const callback = element => {
-    return element > 20;
-}
-console.log(filterArray(array, callback))
-    //console.log(array.filter(callback))
+// let array = [10, 30, 1, 8, 122];
+// const callback = element => {
+//     return element > 20;
+// }
+// console.log(filterArray(array, callback))
+//console.log(array.filter(callback))
 
 
 
