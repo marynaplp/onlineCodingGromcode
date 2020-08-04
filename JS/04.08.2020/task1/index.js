@@ -11,17 +11,14 @@
 
 function filterArray(arr, callback) {
     const result = [];
-
     for (let i = 0; i < arr.length; i++) {
         if (callback(arr[i], i, arr)) result.push(arr[i])
     }
 
     return result
 }
-
-
 // //Testing filter
-let array = [10, 30, 1, 8, 122];
+const array = [10, 30, 1, 8, 122];
 const callback = element => {
     return element > 20;
 }
