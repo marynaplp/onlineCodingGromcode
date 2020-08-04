@@ -13,7 +13,7 @@ function filterArray(arr, callback) {
     const result = [];
     for (let i = 0; i < arr.length; i++) {
         if (callback(arrElement, index, entireArr)) {
-            result.push(arr[i]);
+            result.push(arrElement);
         }
     }
     return result;
