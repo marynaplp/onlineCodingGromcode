@@ -20,7 +20,9 @@ function filterArray(arr, callback) {
 }
 // //Testing filter
 let array = [10, 30, 1, 8, 122];
-const callback = element => element > 20;
+const callback = element => {
+    return element > 20;
+}
 
 console.log(filterArray(array, callback))
     //console.log(array.filter(callback))
