@@ -1,20 +1,22 @@
 // input: object
 //output: object
 
-function addPropertyV1(userData, userId) {
+const addPropertyV1 = (userData, userId) => {
     userData.id = userId;
     return userData;
-
 }
 
-function addPropertyV2(userData, userId) {
-    Object.assign(userData, {
-        id: userId
-    })
-    return userId
+const addPropertyV2 = (userData, userId) => {
+
+    const newObj = Object.assign(
+        userData, {
+            id: userId
+        });
+    return newObj;
 }
 
-function addPropertyV3(userData, userId) {
+const addPropertyV3 = (userData, userId) => {
+
     const newObj = Object.assign({}, userData, {
         id: userId
     });
@@ -22,11 +24,15 @@ function addPropertyV3(userData, userId) {
     return newObj;
 }
 
-function addPropertyV4(userData, userId) {
-    const userDataCopy = {...userData }
-    return addPropertyV2(userDataCopy, userId)
-
+const addPropertyV4 = (userData, userId) => {
+    const newObj = Object.assign({
+        ...userData
+    }, {
+        id: userId
+    });
+    return newObj;
 }
+
 // const obj = {
 //     name: 'Maryna',
 //     age: 100,
