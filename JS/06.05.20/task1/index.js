@@ -5,6 +5,7 @@ function compareObjects(obj1, obj2) {
     if (keys1.length !== keys2.length) {
         return false
     }
+
     return keys1.reduce((acc, key) =>
         obj1[key] === obj2[key], true
     )
