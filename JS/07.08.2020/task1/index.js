@@ -14,14 +14,20 @@
 //compare values, if not equal - false
 
 function compareObjects(obj1, obj2) {
-    const keys1 = Object.keys(obj1)
-    const keys2 = Object.keys(obj2)
+    let keys1 = Object.keys(obj1);
+    let keys2 = Object.keys(obj2);
 
-    if (keys1.length !== keys2.length) {
-        return false
-    }
+    if (keys1.length !== keys2.length)
+        return false;
 
-    return keys1.reduce((acc, key) =>
-        obj1[key] === obj2[key], true
-    )
+    return keys1.reduce((acc, key) => {
+        if (acc === false)
+            return false;
+
+        return obj1[key] === obj2[key];
+
+    }, true);
 }
+
+
+console.log(compareObjects(obj1, obj2));
