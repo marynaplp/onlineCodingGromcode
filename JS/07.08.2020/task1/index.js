@@ -28,6 +28,3 @@ function compareObjects(obj1, obj2) {
 
     }, true);
 }
-
-
-console.log(compareObjects(obj1, obj2));
