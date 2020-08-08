@@ -16,20 +16,10 @@
 function compareObject(obj1, obj2) {
     const keys1 = Object.keys(obj1)
     const keys2 = Object.keys(obj2)
-
-    console.log(keys1)
-    console.log(keys2)
     if (keys1.length !== keys2.length) {
         return false
     }
-    key1.forEach(key => {
-            console.log("KEY" + key);
-            console.log("VALUE2" + obj[key])
-
-            console.log("KEY2" + key2[index]);
-            console.log("VALUE" + obj2[keys2[index]]);
-
-
-
-        )
-    }
+    return keys1.reduce((acc, key) =>
+        obj1[key] === obj2[key], true
+    )
+}
