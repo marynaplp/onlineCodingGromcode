@@ -22,6 +22,6 @@ function compareObjects(obj1, obj2) {
     }
 
     return keys1.reduce((acc, key) =>
-        obj1[key] === obj2[key], false
+        obj1[key] === obj2[key], true
     )
 }
