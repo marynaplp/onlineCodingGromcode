@@ -1,4 +1,4 @@
-const createLogger = () => {
+export const createLogger = () => {
     const records = [];
     return {
         warn(message) {
@@ -42,9 +42,3 @@ const createLogger = () => {
         }
     };
 };
-const logger1 = createLogger();
-console.log(logger1);
-const res = logger1.warn('hello');
-console.log(res)
-console.log(logger1.getRecords());
-console.log(logger1.getRecords('error'))
