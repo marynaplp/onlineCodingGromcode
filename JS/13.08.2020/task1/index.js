@@ -1,4 +1,4 @@
-export const createLogger = () => {
+const createLogger = () => {
     const records = [];
     return {
         warn(message) {
@@ -38,7 +38,7 @@ export const createLogger = () => {
                     .filter(({
                         type
                     }) => type === str) : records)
-                .sort((a, b) => a.dateTime - b.dateTime);
+                .sort((a, b) => b.dateTime - a.dateTime);
         }
     };
 };
