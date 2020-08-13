@@ -2,14 +2,15 @@ const createLogger = () => {
     const records = [];
     return {
         warn(message) {
-            //input:string
-            //output:undefined
+            // input: string
+            // output: undefined
             records.push({
                 message,
                 dateTime: new Date(),
                 type: 'warn'
             });
         },
+
         error(message) {
             records.push({
                 message,
@@ -17,6 +18,7 @@ const createLogger = () => {
                 type: 'error'
             });
         },
+
         log(message) {
             records.push({
                 message,
@@ -24,31 +26,19 @@ const createLogger = () => {
                 type: 'log'
             });
         },
-        //input string
-        //output array
-        //algo:
-        //check if input ->filter
-        //return all records
-        //sort
+        //input:string
+        //output: array
 
-        getRecords(type) {
-            return (type ? records
-                    .filter(message => message.type == type) : records)
-                .sort((mes1, mes2) => {
-                    mes1.dateTime - mes2.dateTime
-                })
-                // if (type) {
-                //     return records
-                //         .filter(message => message.type === type)
-                //         .sort((mes1, mes2) => {
-                //             mes1.dateTime - mes2.dateTime
-                //         })
-                // } else {
-                //     return records
-                //         .sort((mes1, mes2) => {
-                //             mes1.dateTime - mes2.dateTime
-                //         })
-
+        // algo
+        //1. check if input -> filter
+        //2. return all records
+        //3. sort
+        getRecords(str) {
+            return (str ? records
+                    .filter(({
+                        type
+                    }) => type === str) : records)
+                .sort((a, b) => a.dateTime - b.dateTime);
         }
     };
 };
