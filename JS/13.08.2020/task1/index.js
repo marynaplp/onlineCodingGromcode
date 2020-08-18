@@ -48,3 +48,11 @@ const res = logger1.warn('hello');
 console.log(res)
 console.log(logger1.getRecords());
 console.log(logger1.getRecords('error'))
+
+//const LexEnv ={
+//enviromentrecord:{
+//a: number,
+//
+//}, 
+//outer; global
+//}
