@@ -1,33 +1,38 @@
 const timer = {
-    secondsPassed: 0,
-    minsPassed: 0,
-    // startTimer() {
-    //     const adder = function() {
-    //         console.log(this)
-    //         this.secondsPassed += 1;
-    //     };
-    //     console.log(this);
-    //     const rest = adder.bind(this) //console.log(bind)
-    //     setInterval(rest, 1000)
-    // },
+        secondsPassed: 0,
+        minsPassed: 0,
+        timeId: 0,
 
-    startTimer() {
-        setInterval(() => {
-            console.log(this);
-            this.secondsPassed += 1;
+        // startTimer() {
+        //     const adder = function() {
+        //         console.log(this)
+        //         this.secondsPassed += 1;
+        //     };
+        //     console.log(this);
+        //     const rest = adder.bind(this) //console.log(bind)
+        //     setInterval(rest, 1000)
+        // },
 
-        }, 1000);
-    },
-    stopTimer() {
+        startTimer() {
+            setInterval(() => {
+                this.secondsPassed += 1;
+                if (this.secondsPassed === 60) {
+                    this.minsPassed += 1
+                    this.secondsPassed = 0;
+                }
 
-    },
+            }, 1000);
+        },
+        stopTimer() {
+            clearInterval(this.timerId);
+            this.timerId = null;
+        },
 
 
 
-}
-
-timer.secondsPassed = 55;
-timer.startTimer();
+    }
+    //timer.startTimer();
+timer.stopTimer()
 
 
 // setTimeout(() => {
