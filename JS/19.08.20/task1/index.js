@@ -64,15 +64,16 @@
 //     }
 // }
 
-const myBind = (func, context, ...args) => {
+export const bind = (func, context, ...args) => {
 
     return function() {
 
         return func.call(context, ...args)
     }
 }
-const printMessageBinded = myBind(printMessage, user, 200, "Kiev");
+const printMessageBinded = bind(printMessage, user, 200, "Kiev");
 printMessageBinded()
+
 
 
 //  const myBind1 = (func, context, ...args) => {
