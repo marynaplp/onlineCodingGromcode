@@ -89,17 +89,17 @@
 
  //Option 2
 
- const mySuperBind = (func, context, ...args) => {
-     console.log('Step 1');
-     return function() {
+ //  const mySuperBind = (func, context, ...args) => {
+ //      console.log('Step 1');
+ //      return function() {
 
-         console.log(context)
-         context.tempFunction = func;
-         console.log(context);
-         context.tempFunction(...args)
-     }
- }
+ //          console.log(context)
+ //          context.tempFunction = func;
+ //          console.log(context);
+ //          context.tempFunction(...args)
+ //      }
+ //  }
 
- const printMessageBinded3 = mySuperBind(printMessage, user, 50)
+ //  const printMessageBinded3 = mySuperBind(printMessage, user, 50)
 
- printMessageBinded();
+ //  printMessageBinded();
