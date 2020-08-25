@@ -64,15 +64,15 @@
 //     }
 // }
 
-export const bind = (func, context, ...args) => {
+// export const bind = (func, context, ...args) => {
 
-    return function() {
+//     return function() {
 
-        return func.call(context, ...args)
-    }
-}
-const printMessageBinded = bind(printMessage, user, 200, "Kiev");
-printMessageBinded()
+//         return func.call(context, ...args)
+//     }
+// }
+// const printMessageBinded = bind(printMessage, user, 200, "Kiev");
+// printMessageBinded()
 
 
 
@@ -90,17 +90,22 @@ printMessageBinded()
 
 //Option 2
 
-//  const mySuperBind = (func, context, ...args) => {
-//      console.log('Step 1');
-//      return function() {
+const myBindSuperBind = (func, context, ...args) => {
+    console.log("step1")
+    return function() {
+        console.log("step2");
 
-//          console.log(context)
-//          context.tempFunction = func;
-//          console.log(context);
-//          context.tempFunction(...args)
-//      }
-//  }
+        const copyContext = {
+            ...context
+        }
+        copyContext.tempFunction = func;
+        copyContext.tempFunction(...args);
+    }
 
-//  const printMessageBinded3 = mySuperBind(printMessage, user, 50)
+}
 
-//  printMessageBinded();
+const printMyBind4 = myBindSuperBind(printMessage, user, 200, 'Dnipro');
+// console.log(printMyBind4)
+printMyBind4();
+
+console.log(user)
