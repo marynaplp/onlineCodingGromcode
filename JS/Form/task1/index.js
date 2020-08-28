@@ -9,11 +9,11 @@ const formElem = document.querySelector('.login-form');
 //2.validate e-mail
 //3.validate password
 const validateEmail = email =>
-    email.includes('@') ? null : 'Incorrect email';
+    email.includes('@') ? null : 'Should be an email';
 
 const handleEmail = event => {
         const email = event.target.value;
-        const error = email ? validateEmail(email) : 'Email required';
+        const error = email ? validateEmail(email) : 'Required';
         emailErrorText.textContent = error;
     }
     // const handleEmail = (event) => {
@@ -28,7 +28,7 @@ const handleEmail = event => {
 emailInput.addEventListener('input', handleEmail)
 
 const handlePassword = event => {
-    const error = event.target.value ? null : 'Password required';
+    const error = event.target.value ? null : 'Required ';
     passwordErrorText.textContent = error;
 }
 
