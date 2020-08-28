@@ -8,12 +8,12 @@ const formElem = document.querySelector('.login-form');
 //1.readform data after submit
 //2.validate e-mail
 //3.validate password
-const validateEmail = (email) => {
-    email.includes("@") ? null : 'Incorrect email'
-}
-const handleEmail = (event) => {
+const validateEmail = email =>
+    email.includes('@') ? null : 'Incorrect email';
+
+const handleEmail = event => {
         const email = event.target.value;
-        const error = email ? validateEmail(email) : "Email required";
+        const error = email ? validateEmail(email) : 'Email required';
         emailErrorText.textContent = error;
     }
     // const handleEmail = (event) => {
@@ -25,21 +25,25 @@ const handleEmail = (event) => {
     // }
 
 
-emailInput.addEventListener("input", handleEmail);
+emailInput.addEventListener('input', handleEmail)
 
-const handlePassword = (event) => {
-    const error = event.target.value ? null : "Password required";
+const handlePassword = event => {
+    const error = event.target.value ? null : 'Password required';
     passwordErrorText.textContent = error;
-
-
 }
 
-passwordInput.addEventListener('input', handlePassword);
+passwordInput.addEventListener('input', handlePassword)
 
 
-const handleSubmit = event => {
-    event.preventDefault();
-    const formData = JSON.stringify(Object.fromEntries(new FormData(formElem)));
-    alert(formData);
-}
-formElem.addEventListener('submit', handleSubmit)
+const handleSubmit = (event) => {
+    event.preventDefault(); // отменить дефолт перезагружает страницу и делает определенный запрос
+    const formData = [...new FormData(formElem)].reduce( // сконструет обьект с которым мы можем взаимодействовать;  получить все значения поля 
+        (acc, [field, value]) => ({
+            ...acc,
+            [field]: value,
+        }), {}
+    );
+    alert(JSON.stringify(formData));
+};
+
+formElem.addEventListener('submit', handleSubmit);
