@@ -35,15 +35,10 @@ const handlePassword = event => {
 passwordInput.addEventListener('input', handlePassword)
 
 
-const handleSubmit = (event) => {
-    event.preventDefault(); // отменить дефолт перезагружает страницу и делает определенный запрос
-    const formData = [...new FormData(formElem)].reduce( // сконструет обьект с которым мы можем взаимодействовать;  получить все значения поля 
-        (acc, [field, value]) => ({
-            ...acc,
-            [field]: value,
-        }), {}
-    );
-    alert(JSON.stringify(formData));
-};
+const handleSubmit = event => {
+    event.preventDefault();
+    const formData = JSON.stringify(Object.fromEntries(new FormData(formElem)));
+    alert(formData)
+}
 
 formElem.addEventListener('submit', handleSubmit);
