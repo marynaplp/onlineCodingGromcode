@@ -9,12 +9,11 @@ const formElem = document.querySelector('.login-form');
 //2.validate e-mail
 //3.validate password
 const validateEmail = (email) => {
-    return email.includes("@") ? null : 'Incorrect email'
+    email.includes("@") ? null : 'Incorrect email'
 }
 const handleEmail = (event) => {
-
         const email = event.target.value;
-        const error = email ? validateEmail(mail) : "Email required";
+        const error = email ? validateEmail(email) : "Email required";
         emailErrorText.textContent = error;
     }
     // const handleEmail = (event) => {
@@ -27,6 +26,7 @@ const handleEmail = (event) => {
 
 
 emailInput.addEventListener("input", handleEmail);
+
 const handlePassword = (event) => {
     const error = event.target.value ? null : "Password required";
     passwordErrorText.textContent = error;
@@ -37,7 +37,7 @@ const handlePassword = (event) => {
 passwordInput.addEventListener('input', handlePassword);
 
 
-const handleSubmit = () => {
+const handleSubmit = event => {
     event.preventDefault();
     const formData = JSON.stringify(Object.fromEntries(new FormData(formElem)));
     alert(formData);
