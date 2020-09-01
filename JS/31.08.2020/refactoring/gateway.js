@@ -1,16 +1,22 @@
-const listElem = document.querySelector('.list');
+import { tasks } from "./storage.js"
+import { renderList } from "./render.js"
+
 const inputElem = document.querySelector('.task-input');
-export const checkthisDone = (event) => {
+
+export const updateTask = (event) => {
     const checkedEl = event.target;
     if (checkedEl.tagName !== 'INPUT') return;
-    const getElId = tasks.find(elem => elem.id === +checkedEl.parentElement.dataset.id);
-    getElId.done = checkedEl.checked;
-    getElId.doneDate = new Date();
-    listElem.innerHTML = '';
+
+    const taskById = tasks.find(elem => elem.id == checkedEl.dataset.id);
+
+    taskById.done = !taskById.done;
+    taskById.doneDate = taskById.done ? new Date() : null;
+
     renderList(tasks);
 };
-listElem.addEventListener('click', checkthisDone);
-export const createTaskBoard = () => {
+//listElem.addEventListener('click', checkthisDone);
+
+export const createTask = () => {
     if (inputElem.value == '') return;
     tasks.push({
         id: tasks.length + 1,
